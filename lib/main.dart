@@ -77,7 +77,7 @@ class SignInButton extends StatelessWidget {
 
     return Container(
       margin: EdgeInsets.only(
-        bottom: size.height * 0.022,
+        bottom: size.height * 0.01,
       ),
       child: TextButton(
         onPressed: () {},

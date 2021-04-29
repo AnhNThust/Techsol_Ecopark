@@ -13,10 +13,8 @@ class NameCompany extends StatelessWidget {
     return Container(
       width: size.width,
       height: size.height / 4.5,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(
-          vertical: 45,
-        ),
+      child: Align(
+        alignment: Alignment.centerLeft,
         child: Text(
           "TECHSOL_ECOPARK",
           style: TextStyle(
