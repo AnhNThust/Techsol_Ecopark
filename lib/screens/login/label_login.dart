@@ -8,11 +8,11 @@ class LabelLogIn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    var width = size.width;
-    print(width);
+    // var width = size.width;
+    // print(width);
 
     return Container(
-      width: width,
+      width: size.width,
       height: size.height / 14,
       child: Padding(
         padding: const EdgeInsets.symmetric(

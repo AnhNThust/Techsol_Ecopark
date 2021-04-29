@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:techsol_ecopark/constants.dart';
 
 class NameCompany extends StatelessWidget {
   const NameCompany({
@@ -8,6 +9,7 @@ class NameCompany extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+
     return Container(
       width: size.width,
       height: size.height / 4.5,

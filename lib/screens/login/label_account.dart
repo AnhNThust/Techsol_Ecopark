@@ -11,6 +11,7 @@ class LabelAccount extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+
     return Container(
       width: size.width,
       child: Padding(

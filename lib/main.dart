@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:techsol_ecopark/constants.dart';
 
@@ -6,6 +7,7 @@ import 'screens/login/label_account.dart';
 import 'screens/login/label_login.dart';
 import 'screens/login/my_check_box.dart';
 import 'screens/login/name_company.dart';
+import 'screens/login/sign_up_button.dart';
 
 void main() {
   runApp(MyApp());
@@ -46,74 +48,12 @@ class MyApp extends StatelessWidget {
                       InputField(),
                       Padding(
                         padding: const EdgeInsets.only(
-                          right: 10,
+                          right: CusPadding,
                         ),
-                        child: Row(
-                          children: <Widget>[
-                            MyCheckBox(),
-                            Text(
-                              "Remember me",
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 16,
-                                fontFamily: "Lato",
-                              ),
-                            ),
-                            Spacer(),
-                            TextButton(
-                              onPressed: () {},
-                              child: Text(
-                                "Forgot Password",
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 16,
-                                  fontFamily: "Lato",
-                                  decoration: TextDecoration.underline,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
+                        child: ForgotButton(),
                       ), //Check Box and Forgot Password
-                      TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          "Sign In",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 21,
-                            fontFamily: "Lato",
-                          ),
-                        ),
-                        style: TextButton.styleFrom(
-                          backgroundColor: kBackgroundBtnColor,
-                        ),
-                      ), //Button Sign In
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text(
-                            "Don't have an account ?",
-                            style: TextStyle(
-                              color: Color(0xFF343F4B),
-                              fontSize: 16,
-                              fontFamily: "Lato",
-                            ),
-                          ),
-                          TextButton(
-                            onPressed: () {},
-                            child: Text(
-                              "Sign Up",
-                              style: TextStyle(
-                                color: kBackgroundBtnColor,
-                                fontSize: 16,
-                                fontFamily: "Lato",
-                                fontWeight: FontWeight.w900,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ), //Sign Up
+                      SignInButton(), //Button Sign In
+                      SignUpButton(), //Sign Up
                     ],
                   ),
                 ),
@@ -125,6 +65,84 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+class SignInButton extends StatelessWidget {
+  const SignInButton({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+
+    return Container(
+      margin: EdgeInsets.only(
+        bottom: size.height * 0.022,
+      ),
+      child: TextButton(
+        onPressed: () {},
+        child: Text(
+          "Sign In",
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 21,
+            fontFamily: "Lato",
+          ),
+        ),
+        style: TextButton.styleFrom(
+          backgroundColor: kBackgroundBtnColor,
+        ),
+      ),
+    );
+  }
+}
+
+class ForgotButton extends StatelessWidget {
+  const ForgotButton({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    // print("${size.height}");
+
+    return Container(
+      margin: EdgeInsets.only(
+        top: size.height * 0.015, //10
+        bottom: size.height * 0.022, //15
+      ),
+      child: Row(
+        children: <Widget>[
+          MyCheckBox(),
+          Text(
+            "Remember me",
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: size.width * 0.05, //16
+              fontFamily: "Lato",
+            ),
+          ),
+          Spacer(),
+          TextButton(
+            onPressed: () {},
+            child: Text(
+              "Forgot Password",
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: size.width * 0.05, //16
+                fontFamily: "Lato",
+                decoration: TextDecoration.underline,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+
 
 
 
