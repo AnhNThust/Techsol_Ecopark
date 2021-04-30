@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:techsol_ecopark/constants.dart';
 
 class NameCompany extends StatelessWidget {
   const NameCompany({

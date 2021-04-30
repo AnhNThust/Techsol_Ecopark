@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:techsol_ecopark/constants.dart';
+import 'package:techsol_ecopark/screens/main_page/main_screen.dart';
 
 import 'screens/login/input_field.dart';
 import 'screens/login/label_account.dart';
@@ -80,7 +81,13 @@ class SignInButton extends StatelessWidget {
         bottom: size.height * 0.01,
       ),
       child: TextButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => MainPageScreen(),
+            ));
+        },
         child: Text(
           "Sign In",
           style: TextStyle(
@@ -141,16 +148,3 @@ class ForgotButton extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
