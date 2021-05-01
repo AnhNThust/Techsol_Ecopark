@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:techsol_ecopark/constants.dart';
 
 import 'body.dart';
+import 'templates/item_nav_bar.dart';
 
 class MainPageScreen extends StatelessWidget {
   @override
@@ -26,23 +27,6 @@ class MainPageScreen extends StatelessWidget {
         ),
         child: Row(
           children: [
-            // TextButton.icon(
-            //   onPressed: () {},
-            //   icon: Image.asset(
-            //     "assets/images/Book.png",
-            //     color: Colors.white,
-            //     width: 40,
-            //     height: 40,
-            //   ),
-            //   label: Text(
-            //     "Node list",
-            //     style: TextStyle(
-            //       color: Colors.white,
-            //       fontSize: 11,
-            //       fontFamily: "Lato",
-            //     ),
-            //   ),
-            // )
             ItemOfNavBar(
               image: "assets/images/Book.png",
               title: "Node list",
@@ -59,49 +43,9 @@ class MainPageScreen extends StatelessWidget {
             ),
           ],
         ),
-      ),
+      ), //Navigator Bar
     );
   }
 }
 
-class ItemOfNavBar extends StatelessWidget {
-  const ItemOfNavBar({
-    Key key,
-    this.image,
-    this.title,
-  }) : super(key: key);
 
-  final String image;
-  final String title;
-
-  @override
-  Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-
-    return Padding(
-      padding: const EdgeInsets.only(
-        left: CusPadding,
-        right: CusPadding,
-      ),
-      child: Column(
-        children: [
-          IconButton(
-            icon: Image.asset(
-                image,
-              color: Colors.white,
-            ),
-            onPressed: () {},
-          ),
-          Text(
-            title,
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: size.width * 0.034,
-              fontFamily: "Lato",
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
