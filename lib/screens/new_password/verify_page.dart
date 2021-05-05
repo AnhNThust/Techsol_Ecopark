@@ -1,26 +1,23 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:techsol_ecopark/constants.dart';
+import 'package:techsol_ecopark/templates/back_button_1.dart';
+
+import 'accept_button.dart';
+import 'input_field.dart';
 
 class VerifyPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              IconButton(
-                icon: Image.asset(
-                  "assets/images/Back2.png",
-                  height: 25,
-                  width: 25,
-                ),
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-              ),
+              BackButton1(),
               Center(
                 heightFactor: 1.5,
                 child: Column(
@@ -42,41 +39,13 @@ class VerifyPage extends StatelessWidget {
                         fontFamily: "Lato",
                       ),
                     ), // Nhãn Gửi xác nhận vào gmail
-                    Container(
-                      width: 250,
-                      height: 50,
-                      color: kBackgroundBtnColor,
-                      margin: EdgeInsets.only(
-                        bottom: 30,
-                      ),
-                      child: TextField(
-                        decoration: InputDecoration(
-                          enabledBorder: InputBorder.none,
-                          focusedBorder: InputBorder.none,
-                          contentPadding: EdgeInsets.symmetric(
-                            horizontal: 7,
-                          ),
-                        ),
-                        style: TextStyle(
-                          fontSize: 20,
-                        ),
-                        onChanged: (value) {},
-                      ),
+                    InputCodeVeri(
+                      wid: size.width * 0.78,
+                      hei: size.height * 0.094,
+                      fontSi: size.width * 0.0625,
+                      marBottom: CusMargin + 15,
                     ), // Ô Nhập mã xác nhận
-                    TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        "Xác nhận",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 21,
-                          fontFamily: "Lato",
-                        ),
-                      ),
-                      style: TextButton.styleFrom(
-                        backgroundColor: kBackgroundBtnColor,
-                      ),
-                    ), // Nút xác nhận
+                    AcceptButton(), // Nút xác nhận
                   ],
                 ),
               ),
@@ -87,3 +56,5 @@ class VerifyPage extends StatelessWidget {
     );
   }
 }
+
+

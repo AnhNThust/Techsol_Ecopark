@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:techsol_ecopark/screens/register/create_new%20_account.dart';
 
 import '../../constants.dart';
 
@@ -25,7 +26,14 @@ class SignUpButton extends StatelessWidget {
           ),
         ),
         TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => CreateNewAccount(),
+                )
+            );
+          },
           child: Text(
             "Sign Up",
             style: TextStyle(
