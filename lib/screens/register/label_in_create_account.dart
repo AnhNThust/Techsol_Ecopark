@@ -14,11 +14,9 @@ class LabelInCA extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(
-        top: CusPadding,
-        left: CusMargin + 10,
-        bottom: CusPadding - 5,
+    return Container(
+      margin: EdgeInsets.only(
+        left: size.width * 0.08
       ),
       child: Text(
         title,

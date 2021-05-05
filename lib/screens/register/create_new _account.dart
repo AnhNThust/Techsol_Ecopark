@@ -22,7 +22,7 @@ class CreateNewAccount extends StatelessWidget {
               BackButton1(),
               Center(
                 child: Text(
-                  "Tạo tài khoản mới",
+                  "Tạo tài khoản mới\n",
                   style: TextStyle(
                     color: kBackgroundBtnColor,
                     fontSize: size.width * 0.068,
@@ -40,7 +40,7 @@ class CreateNewAccount extends StatelessWidget {
                 child: InputCodeVeri(
                   wid: size.width * 0.84,
                   hei: size.height * 0.08,
-                  fontSi: size.width * 0.05,
+                  fontSi: size.width * 0.06,
                   marBottom: CusPadding,
                 ),
               ),

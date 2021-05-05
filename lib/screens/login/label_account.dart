@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:techsol_ecopark/constants.dart';
 
 class LabelAccount extends StatelessWidget {
   const LabelAccount({
@@ -18,13 +19,13 @@ class LabelAccount extends StatelessWidget {
         padding: const EdgeInsets.only(
           top: 7,
           bottom: 7,
-          left: 15,
+          left: CusMargin,
         ),
         child: Text(
           text,
           style: TextStyle(
             color: Colors.white,
-            fontSize: 21,
+            fontSize: size.width * 0.065,
           ),
           textAlign: TextAlign.left,
         ),

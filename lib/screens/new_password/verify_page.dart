@@ -26,7 +26,7 @@ class VerifyPage extends StatelessWidget {
                       "\nNhập mã xác nhận\n",
                       style: TextStyle(
                         color: kBackgroundBtnColor,
-                        fontSize: 21,
+                        fontSize: size.width * 0.065,
                         fontFamily: "Lato",
                         fontWeight: FontWeight.bold,
                       ),
@@ -35,7 +35,7 @@ class VerifyPage extends StatelessWidget {
                       "Gửi mã xác nhận vào gmail\n",
                       style: TextStyle(
                         color: Colors.black,
-                        fontSize: 18,
+                        fontSize: size.width * 0.056,
                         fontFamily: "Lato",
                       ),
                     ), // Nhãn Gửi xác nhận vào gmail
