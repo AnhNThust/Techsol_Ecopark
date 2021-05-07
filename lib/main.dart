@@ -87,7 +87,8 @@ class SignInButton extends StatelessWidget {
               context,
               MaterialPageRoute(
                 builder: (context) => MainPageScreen(),
-              ));
+              ),
+          );
         },
         child: Text(
           "Sign In",

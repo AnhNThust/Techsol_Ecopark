@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:techsol_ecopark/constants.dart';
+import 'package:techsol_ecopark/screens/new_password/new_password_page.dart';
 import 'package:techsol_ecopark/templates/back_button_1.dart';
 
 import 'accept_button.dart';
@@ -45,7 +46,16 @@ class VerifyPage extends StatelessWidget {
                       fontSi: size.width * 0.0625,
                       marBottom: CusMargin + 15,
                     ), // Ô Nhập mã xác nhận
-                    AcceptButton(), // Nút xác nhận
+                    AcceptButton(
+                      press: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => NewPasswordPage()
+                          ),
+                        );
+                      },
+                    ), // Nút xác nhận
                   ],
                 ),
               ),
