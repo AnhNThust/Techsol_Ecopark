@@ -7,11 +7,12 @@ class ItemOfNavBar extends StatelessWidget {
     Key key,
     this.image,
     this.title,
+    this.press,
   }) : super(key: key);
 
   final String image;
   final String title;
-
+  final Function press;
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -28,7 +29,7 @@ class ItemOfNavBar extends StatelessWidget {
               image,
               color: Colors.white,
             ),
-            onPressed: () {},
+            onPressed: press,
           ),
           Text(
             title,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:techsol_ecopark/constants.dart';
-import 'package:techsol_ecopark/screens/new_password/accept_button.dart';
-import 'package:techsol_ecopark/screens/new_password/input_field.dart';
+import 'package:techsol_ecopark/screens/new_password/components/accept_button.dart';
+import 'package:techsol_ecopark/screens/new_password/components/input_field.dart';
 import 'package:techsol_ecopark/templates/back_button_1.dart';
 
 import 'label_in_create_account.dart';

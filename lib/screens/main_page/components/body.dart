@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:techsol_ecopark/constants.dart';
 
 import 'my_header.dart';
-import 'templates/status_row.dart';
+import '../templates/status_row.dart';
 
 class Body extends StatelessWidget {
   @override

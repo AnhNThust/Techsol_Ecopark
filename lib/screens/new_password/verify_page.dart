@@ -4,8 +4,8 @@ import 'package:techsol_ecopark/constants.dart';
 import 'package:techsol_ecopark/screens/new_password/new_password_page.dart';
 import 'package:techsol_ecopark/templates/back_button_1.dart';
 
-import 'accept_button.dart';
-import 'input_field.dart';
+import 'components/accept_button.dart';
+import 'components/input_field.dart';
 
 class VerifyPage extends StatelessWidget {
   @override

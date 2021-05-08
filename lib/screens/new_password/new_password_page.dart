@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:techsol_ecopark/constants.dart';
-import 'package:techsol_ecopark/screens/new_password/accept_button.dart';
+import 'package:techsol_ecopark/screens/new_password/components/accept_button.dart';
 import 'package:techsol_ecopark/templates/back_button_1.dart';
 
 class NewPasswordPage extends StatelessWidget {
