@@ -77,20 +77,20 @@ class _MainPageScreenState extends State<MainPageScreen> {
   Widget getBody() {
     if (selectedIndex == 0 && count == 0) {
       count++;
-      print("count = ${count}");
-      print("selectedIndex = ${selectedIndex}");
+      print("count = $count");
+      print("selectedIndex = $selectedIndex");
       return Body();
     }
     else if (selectedIndex == 0 && count > 0) {
-      print("count = ${count}");
-      print("selectedIndex = ${selectedIndex}");
+      print("count = $count");
+      print("selectedIndex = $selectedIndex");
       return MyNotelistPage();
     }
     else if (selectedIndex == 1) {
-      print("selectedIndex = ${selectedIndex}");
+      print("selectedIndex = $selectedIndex");
       return MyStatusPage();
     }
-    print("selectedIndex = ${selectedIndex}");
+    print("selectedIndex = $selectedIndex");
     return MyAccountPage();
   }
 
