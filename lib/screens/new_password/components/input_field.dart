@@ -44,7 +44,7 @@ class InputCodeVeri extends StatelessWidget {
           fontSize: fontSi,
         ),
         onChanged: (value) {},
-        textAlignVertical: TextAlignVertical.center,
+        textAlignVertical: TextAlignVertical.top,
         // textAlign: TextAlign.center,
       ),
     );

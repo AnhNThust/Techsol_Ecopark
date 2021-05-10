@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../constants.dart';
-
 class LabelInCA extends StatelessWidget {
   const LabelInCA({
     Key key,

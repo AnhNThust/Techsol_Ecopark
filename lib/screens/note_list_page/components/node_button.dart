@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:techsol_ecopark/screens/note_list_page/details_node/details_node_page.dart';
 
 import 'my_switch.dart';
 
@@ -14,8 +15,15 @@ class NodeButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextButton( // Vì nhét 2 Text vào đây nên 2 Text bị dính vào nhau
-      onPressed: () {},
+    return TextButton(
+      // Vì nhét 2 Text vào đây nên 2 Text bị dính vào nhau
+      onPressed: () {
+        Navigator.push(context,
+          MaterialPageRoute(
+            builder: (context) => DetailsNodePage(),
+          ),
+        );
+      },
       // style: ButtonStyle(
       //   backgroundColor: MaterialStateProperty.all(Colors.green),
       // ),

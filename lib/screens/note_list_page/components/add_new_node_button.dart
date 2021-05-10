@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:techsol_ecopark/screens/note_list_page/add_new_node/add_new_node_page.dart';
 
 import '../../../constants.dart';
 
@@ -22,6 +23,12 @@ class AddNewNodeButton extends StatelessWidget {
       child: ElevatedButton.icon(
         onPressed: () {
           print("Clicked Thêm Node Mới");
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => AddNewNodePage(),
+            ),
+          );
         },
         icon: Image.asset(
           "assets/images/Add.png",
