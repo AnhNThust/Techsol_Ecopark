@@ -19,14 +19,13 @@ class StatusRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      alignment: Alignment.center,
       // height: size.height * 0.075,
       height: myHeight,
       // width: size.width * 0.7,
       width: myWidth,
-      margin: EdgeInsets.only(
-        top: CusPadding + 2,
-        left: CusPadding + 2,
-        bottom: CusPadding,
+      margin: EdgeInsets.symmetric(
+        vertical: CusPadding + 3,
       ),
       color: Colors.white,
       child: Row(

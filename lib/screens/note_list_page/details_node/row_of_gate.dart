@@ -47,30 +47,35 @@ class _RowOfGateState extends State<RowOfGate> {
         children: [
           Expanded(
             flex: 2,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "${widget.nameGate}",
-                  style: TextStyle(
-                    fontSize: size.width * 0.053,
-                    fontFamily: "Lato",
-                    fontWeight: FontWeight.bold,
+            child: TextButton(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "${widget.nameGate}",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: size.width * 0.053,
+                      fontFamily: "Lato",
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                ),
-                Expanded(
-                  child: Align(
-                    alignment: Alignment.bottomRight,
-                    child: Text(
-                      "Hẹn giờ 1 từ 6h đến 8h",
-                      style: TextStyle(
-                        fontSize: size.width * 0.044,
-                        fontFamily: "Lato",
+                  Expanded(
+                    child: Align(
+                      alignment: Alignment.bottomRight,
+                      child: Text(
+                        "Hẹn giờ 1 từ 6h đến 8h",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: size.width * 0.044,
+                          fontFamily: "Lato",
+                        ),
                       ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
+              onPressed: () {},
             ),
           ),
           Expanded(

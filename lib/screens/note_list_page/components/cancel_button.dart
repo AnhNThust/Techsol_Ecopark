@@ -51,30 +51,6 @@ Future<ConfirmAction> _asyncConfirmDialog(BuildContext context) async {
             size: size,
             text: "Có",
           ),
-          // Container(
-          //   width: size.width * 0.2,
-          //   height: size.height * 0.07,
-          //   color: Colors.white,
-          //   margin: EdgeInsets.only(
-          //     right: CusMargin + 15,
-          //     bottom: CusMargin,
-          //   ),
-          //   child: TextButton(
-          //     onPressed: () {
-          //       Navigator
-          //           .of(context)
-          //           .pop(ConfirmAction.Accept);
-          //     },
-          //     child: Text(
-          //       "Có",
-          //       style: TextStyle(
-          //         color: Colors.black,
-          //         fontSize: size.width * 0.048,
-          //         fontFamily: "Lato",
-          //       ),
-          //     ),
-          //   ),
-          // ),
         ],
       );
     },
@@ -115,7 +91,35 @@ class ButtonInAlertDialog extends StatelessWidget {
             fontFamily: "Lato",
           ),
         ),
+        style: ButtonStyle(
+
+        ),
       ),
     );
   }
 }
+
+// Container(
+//   width: size.width * 0.2,
+//   height: size.height * 0.07,
+//   color: Colors.white,
+//   margin: EdgeInsets.only(
+//     right: CusMargin + 15,
+//     bottom: CusMargin,
+//   ),
+//   child: TextButton(
+//     onPressed: () {
+//       Navigator
+//           .of(context)
+//           .pop(ConfirmAction.Accept);
+//     },
+//     child: Text(
+//       "Có",
+//       style: TextStyle(
+//         color: Colors.black,
+//         fontSize: size.width * 0.048,
+//         fontFamily: "Lato",
+//       ),
+//     ),
+//   ),
+// ),

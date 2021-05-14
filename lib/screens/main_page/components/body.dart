@@ -30,13 +30,13 @@ class TableInfo extends StatelessWidget {
 
     return Container(
       width: size.width * 0.8,
-      height: size.height * 0.6,
+      height: size.height * 0.62,
       margin: EdgeInsets.only(
-        top: CusMargin,
+        top: CusPadding,
       ),
       color: kBackgroundBtnColor,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        // crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           StatusRow(
             size: size,
