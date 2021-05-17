@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:techsol_ecopark/screens/register/create_new%20_account.dart';
 
-import '../../constants.dart';
+import '../../../constants.dart';
 
 class SignUpButton extends StatelessWidget {
   const SignUpButton({

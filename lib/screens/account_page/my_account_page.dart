@@ -1,6 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:techsol_ecopark/constants.dart';
+import 'package:techsol_ecopark/screens/chg_pass_page/change_password_page.dart';
+import 'package:techsol_ecopark/screens/login_page/my_login_page.dart';
+
+import 'components/my_elevated_button.dart';
 
 class MyAccountPage extends StatelessWidget {
   const MyAccountPage({Key key}) : super(key: key);
@@ -9,9 +13,9 @@ class MyAccountPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
-    return Scaffold(
-      body: SafeArea(
-        child: Column(
+    return SafeArea(
+      child: Scaffold(
+        body: Column(
           children: [
             Container(
               width: size.width,
@@ -72,7 +76,7 @@ class MyAccountPage extends StatelessWidget {
                           height: size.width * 0.178,
                           decoration: BoxDecoration(
                             borderRadius:
-                                BorderRadius.circular(size.width * 0.09),
+                            BorderRadius.circular(size.width * 0.09),
                             color: Color(0xFFE5E9F2),
                           ),
                           padding: EdgeInsets.all(CusMargin),
@@ -114,7 +118,14 @@ class MyAccountPage extends StatelessWidget {
               size: size,
               urlIcon: "assets/images/Cancel1.png",
               laBel: "Chỉnh sửa mật khẩu",
-              press: () {},
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ChangePasswordPage(),
+                  ),
+                );
+              },
             ),
             MyElevatedButton(
               size: size,
@@ -136,7 +147,15 @@ class MyAccountPage extends StatelessWidget {
                 vertical: CusPadding,
               ),
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context)
+                      .pushAndRemoveUntil(
+                    MaterialPageRoute(
+                      builder: (context) => LoginPage(),
+                    ),
+                        (route) => false,
+                  );
+                },
                 child: Text(
                   "Log Out",
                   style: TextStyle(
@@ -154,51 +173,4 @@ class MyAccountPage extends StatelessWidget {
   }
 }
 
-class MyElevatedButton extends StatelessWidget {
-  const MyElevatedButton({
-    Key key,
-    @required this.size,
-    this.urlIcon,
-    this.laBel,
-    this.press,
-  }) : super(key: key);
 
-  final Size size;
-  final String urlIcon;
-  final String laBel;
-  final Function press;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: size.width,
-      height: size.height * 0.074,
-      margin: EdgeInsets.symmetric(
-        vertical: CusPadding,
-      ),
-      // padding: EdgeInsets.symmetric(
-      //   horizontal: CusPadding,
-      // ),
-      child: ElevatedButton.icon(
-        onPressed: press,
-        icon: Image.asset(
-          urlIcon,
-          width: size.width * 0.088,
-          height: size.width * 0.088,
-          color: kBackgroundBtnColor,
-        ),
-        label: Text(
-          laBel,
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: size.width * 0.057,
-            fontFamily: "Lato",
-          ),
-        ),
-        style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(Colors.white)
-        ),
-      ),
-    );
-  }
-}
