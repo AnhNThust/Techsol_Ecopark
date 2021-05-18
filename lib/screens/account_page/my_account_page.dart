@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:techsol_ecopark/constants.dart';
-import 'package:techsol_ecopark/screens/chg_pass_page/change_password_page.dart';
+import 'package:techsol_ecopark/screens/account_page/add_sub_account_page/add_sub_account_page.dart';
+import 'package:techsol_ecopark/screens/account_page/chg_name_page/change_name_page.dart';
 import 'package:techsol_ecopark/screens/login_page/my_login_page.dart';
 
+import 'chg_pass_page/change_password_page.dart';
 import 'components/my_elevated_button.dart';
 
 class MyAccountPage extends StatelessWidget {
@@ -131,13 +133,27 @@ class MyAccountPage extends StatelessWidget {
               size: size,
               urlIcon: "assets/images/Cancel1.png",
               laBel: "Chỉnh sửa tên",
-              press: () {},
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ChangeNamePage(),
+                  ),
+                );
+              },
             ),
             MyElevatedButton(
               size: size,
               urlIcon: "assets/images/Zoom_in.png",
               laBel: "Thêm tài khoản phụ",
-              press: () {},
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => AddSubAccountPage(),
+                  ),
+                );
+              },
             ),
             Container(
               width: size.width * 0.3,
