@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:techsol_ecopark/constants.dart';
+import 'package:techsol_ecopark/screens/note_list_page/edit_gate_page/edit_gate_page.dart';
 
 class RowOfGate extends StatefulWidget {
   const RowOfGate({
@@ -75,7 +76,14 @@ class _RowOfGateState extends State<RowOfGate> {
                   ),
                 ],
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => EditGatePage(),
+                  ),
+                );
+              },
             ),
           ),
           Expanded(
